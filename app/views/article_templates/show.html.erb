@@ -1,0 +1,73 @@
+<div class="row mb-3">
+  <div class="col-md-8 offset-md-2">
+    <h1>
+      Article #<%= @article.id %> details
+    </h1>
+
+    <div class="row mb-3">
+      <div class="col">
+        <a href="/articles" class="btn btn-block btn-outline-secondary">
+          Go back
+        </a>
+      </div>
+
+      <!-- Edit link article start -->
+      <div class="col">
+        <a href="/articles/<%= @article.id %>/edit" class="btn btn-block btn-outline-secondary">
+          Edit article
+        </a>
+      </div>
+      <!-- Edit link article end -->
+
+      <!-- Delete link article start -->
+      <div class="col">
+        <a href="/delete_article/<%= @article.id %>" class="btn btn-block btn-outline-secondary">
+          Delete article
+        </a>
+      </div>
+      <!-- Delete link article end -->
+    </div>
+
+    <dl>
+      <dt>
+        Title
+      </dt>
+      <!-- Display title start -->
+      <dd>
+        <%= @article.title %>
+      </dd>
+      <!-- Display title end -->
+
+      <dt>
+        Content
+      </dt>
+      <!-- Display content start -->
+      <dd>
+        <%= @article.content %>
+      </dd>
+      <!-- Display content end -->
+
+      <dt>
+        Created at
+      </dt>
+      <!-- Display created_at start -->
+      <dd>
+        <%= time_ago_in_words(@article.created_at) %> ago
+      </dd>
+      <!-- Display created_at end -->
+
+      <dt>
+        Updated at
+      </dt>
+      <!-- Display updated_at start -->
+      <dd>
+        <%= time_ago_in_words(@article.updated_at) %> ago
+      </dd>
+      <!-- Display updated_at end -->
+    </dl>
+  </div>
+</div>
+
+<!-- Show Page Customization starts -->
+
+<!-- Show Page Customization end -->
