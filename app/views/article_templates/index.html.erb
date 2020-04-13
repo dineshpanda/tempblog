@@ -10,17 +10,13 @@
   </div>
 </div>
 
-<!-- Ransack Code start -->
 <div class="row">
   <div class="col-md-12 mb-3">
     <%= render partial: "article_templates/articles_search_form" %>
   </div>
 </div>
-<!-- Ransack Code end -->
 
-<!-- Location Map Code start -->
 
-<!-- Location Map Code end -->
 
 <hr>
 
@@ -54,35 +50,25 @@
 
       <% @articles.each do |article| %>
       <tr>
-        <!-- Display article.id start -->
         <td>
           <%= article.id %>
         </td>
-        <!-- Display article.id end -->
 
-        <!-- Display article.title start -->
         <td>
           <%= article.title %>
         </td>
-        <!-- Display article.title end -->
 
-        <!-- Display article.content start -->
         <td>
           <%= article.content %>
         </td>
-        <!-- Display article.content end -->
 
-        <!-- Display article.created_at start -->
         <td>
           <%= time_ago_in_words(article.created_at) %> ago
         </td>
-        <!-- Display article.created_at end -->
 
-        <!-- Display article.updated_at start -->
         <td>
           <%= time_ago_in_words(article.updated_at) %> ago
         </td>
-        <!-- Display article.updated_at end -->
 
         <td>
           <a href="/articles/<%= article.id %>">

@@ -11,28 +11,23 @@
         </a>
       </div>
 
-      <!-- Edit link photo start -->
       <div class="col">
         <a href="/photos/<%= @photo.id %>/edit" class="btn btn-block btn-outline-secondary">
           Edit photo
         </a>
       </div>
-      <!-- Edit link photo end -->
 
-      <!-- Delete link photo start -->
       <div class="col">
         <a href="/delete_photo/<%= @photo.id %>" class="btn btn-block btn-outline-secondary">
           Delete photo
         </a>
       </div>
-      <!-- Delete link photo end -->
     </div>
 
     <dl>
       <dt>
         Article
       </dt>
-      <!-- Display article_id start -->
       <dd>
         <% if @photo.article.present? %>
           <a href="/articles/<%= @photo.article_id %>">
@@ -40,57 +35,44 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display article_id end -->
 
       <dt>
         Name
       </dt>
-      <!-- Display name start -->
       <dd>
         <%= @photo.name %>
       </dd>
-      <!-- Display name end -->
 
       <dt>
         Image
       </dt>
-      <!-- Display image start -->
       <dd>
         <img src="<%= @photo.image %>" class="img-fluid">
       </dd>
-      <!-- Display image end -->
 
       <dt>
         Location
       </dt>
-      <!-- Display location start -->
       <dd>
         <div>
           <%= render partial: "photo_templates/one_photo_map" %>
         </div>
       </dd>
-      <!-- Display location end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@photo.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@photo.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
-<!-- Show Page Customization end -->
