@@ -34,6 +34,23 @@ class PhotosController < ApplicationController
     end
   end
 
+  def create_row_from_article
+    @photo = Photo.new
+
+    @photo.article_id = params.fetch("article_id")
+    @photo.name = params.fetch("name")
+    @photo.image = params.fetch("image")
+    @photo.location = params.fetch("location")
+
+    if @photo.valid?
+      @photo.save
+
+      redirect_to("/articles/#{@photo.article_id}", notice: "Photo created successfully.")
+    else
+      render("photo_templates/new_form_with_errors.html.erb")
+    end
+  end
+
   def edit_form
     @photo = Photo.find(params.fetch("prefill_with_id"))
 
