@@ -70,7 +70,11 @@
 
         <!-- Display photo.article_id start -->
         <td>
-          <%= photo.article.title %>
+          <% if photo.article.present? %>
+            <a href="/articles/<%= photo.article.id %>">
+              <%= photo.article.title %>
+            </a>
+          <% end %>
         </td>
         <!-- Display photo.article_id end -->
 
