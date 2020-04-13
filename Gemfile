@@ -55,3 +55,4 @@ gem 'carrierwave'
 gem 'cloudinary'
 gem 'gmaps4rails'
 gem 'underscore-rails'
+gem "rollbar"
