@@ -16,7 +16,7 @@
     </label>
 
     <!-- Input for article_id start -->
-    <input type="text" id="article_id" name="article_id" class="form-control">
+    <%= select_tag(:article_id, options_from_collection_for_select(Article.all, :id, :title, @photo.article_id), :class => "form-control") %>
     <!-- Input for article_id end -->
   </div>
   <!-- Label and input for article_id end -->
