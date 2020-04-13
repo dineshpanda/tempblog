@@ -22,7 +22,7 @@ class PhotosController < ApplicationController
 
     @photo.article_id = params.fetch("article_id")
     @photo.name = params.fetch("name")
-    @photo.image = params.fetch("image")
+    @photo.image = params.fetch("image") if params.key?("image")
     @photo.location = params.fetch("location")
 
     if @photo.valid?
@@ -39,7 +39,7 @@ class PhotosController < ApplicationController
 
     @photo.article_id = params.fetch("article_id")
     @photo.name = params.fetch("name")
-    @photo.image = params.fetch("image")
+    @photo.image = params.fetch("image") if params.key?("image")
     @photo.location = params.fetch("location")
 
     if @photo.valid?
@@ -62,7 +62,7 @@ class PhotosController < ApplicationController
 
     @photo.article_id = params.fetch("article_id")
     @photo.name = params.fetch("name")
-    @photo.image = params.fetch("image")
+    @photo.image = params.fetch("image") if params.key?("image")
     @photo.location = params.fetch("location")
 
     if @photo.valid?
